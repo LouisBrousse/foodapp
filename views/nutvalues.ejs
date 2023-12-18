@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutvalues</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+   
+    <table>
+        <% if (nutrilist.length > 0) { %>
+            <% nutrilist.forEach((nutrient) => { %>
+                <tr>
+                    <% Object.entries(nutrient).forEach(([key, value]) => { %>
+                        <td class="name"><%= key %></td>
+                        <td class="value"><%= value %></td>
+                    <% }); %>
+                </tr>
+            <% }); %>
+        <% } else { %>
+            <p>NO NUTRIENT FOUND</p>
+        <% } %>
+    </table>
+    <a href="/">retout à l'acceuil</a>
+</body>
+</html>
