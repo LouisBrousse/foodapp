@@ -80,7 +80,7 @@ app.get("/getid/:id", async (req, res) => {         // en fesant "/___/:___" il 
 
 
 
-app.listen(3000, function () {
-    console.log('Server listening on port 3000');
+app.listen(3004, function () {
+    console.log('Server listening on port 3004');
  });
  
